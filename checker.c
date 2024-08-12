@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 12:51:20 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/11 13:33:11 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/12 11:51:45 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,18 @@
 
 int	main(int argc, char *argv[])
 {
-	int	*arr;
+	int	*arr1;
+	int *arr2;
 	int	i;
 
-	arr = malloc(sizeof(int) * (argc - 1));
+	arr1 = malloc(sizeof(int) * (argc - 1));
+	arr2 = malloc(sizeof(int) * (argc - 1));
 	if (arr == NULL)
 		error();
-	i = 0;
+	i = 1;
 	while (i < argc)
-		if ()
-			return error
+		add argv[i] to array;
+	
 }
 
 void error(void)
