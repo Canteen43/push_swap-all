@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 12:51:20 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/12 11:51:45 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/12 12:31:17 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,14 @@ int	main(int argc, char *argv[])
 	i = 1;
 	while (i < argc)
 		add argv[i] to array;
-	
+	execute intruction(get next line(stdin));
+	i = 2;
+	while (i < argc)
+		if (argv[i] < argv[i -1])
+			return (KO);
+	if (arr2 is not empty)
+		return (KO);
+	return OK;
 }
 
 void error(void)
