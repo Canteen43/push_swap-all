@@ -1,1 +1,4 @@
-Do I do it with arrays or linked lists? I should look at what the intructions do?
+To do:
+	check how creating two separate lists would work with my libft functions.
+		would i just create NULL pointers to the head or something like that?
+	write own functions that use integer content struct.
