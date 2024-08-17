@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.h                                          :+:      :+:    :+:   */
+/*   lst_new_to_back.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/11 13:25:59 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/17 14:32:18 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/17 15:38:19 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/17 18:04:20 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHECKER_H
-# define CHECKER_H
+#include "checker.h"
 
-# include <limits.h>	//INT_MAX, INT_MIN
-# include <unistd.h>	//write()
-
-typedef struct s_list
+t_list	*lst_new_to_back(t_list *node, int value)
 {
-	int				value;
-	struct s_list	*next;
-}					t_list;
+	t_list*	new;
 
-#endif	// CHECKER_H
+	new = lst_new(value);
+	if (new == NULL)
+		return (NULL);
+	(lst_last(node))->next = new;
+}

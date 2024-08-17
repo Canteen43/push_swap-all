@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 12:51:20 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/12 14:02:47 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/17 17:59:48 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,21 @@
 
 int	main(int argc, char *argv[])
 {
-	Create Stack A;
-	Create Stack B;
-	Fill Stack A;
-	if (Element in not integer of duplicate);
-		if (instruction == Error\n)
+	t_list	*head_a;
+	t_list	*head_b;
+	int		i;
+	int		value;
+
+	head_a = NULL;
+	head_b = NULL;
+	i = 1;
+	if (fill_stack(argc, argv, head_a) == -1)
+	{
+		if (get_next_line(stdin) == Error && get_next_line(stdin) == nothing)
 			return OK;
-		if (instruction != Error\n)
+		else
 			return KO;
+	}
 	while (get_next_line(stdin) == something)
 		if (something == valid instruction)
 			execute intruction;
@@ -34,11 +41,20 @@ int	main(int argc, char *argv[])
 	return OK;
 }
 
-void error(void)
+int	fill_stack(int argc, char *argv[], t_list *head_a)
 {
-	free(something);
-	write(2, "Error\n", 6);
-	exit(1);
+	int	i;
+	int	value;
+
+	i = 1;
+	while (i < argc)
+	{
+		if (set_int(argv[i], &value) == -1)
+			return (-1);
+		lst_new_to_back(head_a, value);
+		i++;
+	}
+	return (0);
 }
 
 int	strtoint(char *str)

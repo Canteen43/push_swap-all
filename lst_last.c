@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.h                                          :+:      :+:    :+:   */
+/*   lst_last.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/11 13:25:59 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/17 14:32:18 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/17 15:54:23 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/17 16:00:11 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHECKER_H
-# define CHECKER_H
+#include "checker.h"
 
-# include <limits.h>	//INT_MAX, INT_MIN
-# include <unistd.h>	//write()
-
-typedef struct s_list
+t_list	*lst_last(t_list *node)
 {
-	int				value;
-	struct s_list	*next;
-}					t_list;
-
-#endif	// CHECKER_H
+	if (node == NULL)
+		return (NULL);
+	while (node->next != NULL)
+		node = node->next;
+	return (node);
+}

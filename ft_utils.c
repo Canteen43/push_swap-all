@@ -6,11 +6,11 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 16:22:08 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/12 18:04:01 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/17 18:01:23 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "checker.h"
 
 int	char_in_str(char c, char *s)
 {
@@ -70,18 +70,23 @@ int	lmt_check(int value, char next)
 	}
 }
 
-int	min(int a, int b)
+int	set_int(char *str, int *p_value)
 {
-	if (a <= b)
-		return (a);
-	else
-		return (b);
-}
+	int	factor;
 
-int	max(int a, int b)
-{
-	if (a >= b)
-		return (a);
-	else
-		return (b);
+	*p_value = 0;
+	factor = 1;
+	if (*str == '-')
+	{
+		factor = -1;
+		str++;
+	}
+	while (*str)
+	{
+		if (char_in_str(*str, "0123456789") == 0)
+			return (-1);
+		if (lmt_check(*p_value, *str) == -1)
+			return (-1);
+		*p_value = *p_value * 10 + factor * (*str - '0');
+	}
 }

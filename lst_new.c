@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.h                                          :+:      :+:    :+:   */
+/*   lstnew.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/11 13:25:59 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/17 14:32:18 by kweihman         ###   ########.fr       */
+/*   Created: 2024/05/15 14:40:18 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/17 18:02:52 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHECKER_H
-# define CHECKER_H
+#include "checker.h"
 
-# include <limits.h>	//INT_MAX, INT_MIN
-# include <unistd.h>	//write()
-
-typedef struct s_list
+t_list	*lst_new(int value)
 {
-	int				value;
-	struct s_list	*next;
-}					t_list;
+	t_list	*ptr;
 
-#endif	// CHECKER_H
+	ptr = malloc(sizeof(t_list));
+	if (ptr == NULL)
+		return (NULL);
+	ptr->value = value;
+	ptr->next = NULL;
+	return (ptr);
+}
