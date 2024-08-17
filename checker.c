@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 12:51:20 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/12 12:31:17 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/12 14:02:47 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,23 @@
 
 int	main(int argc, char *argv[])
 {
-	int	*arr1;
-	int *arr2;
-	int	i;
-
-	arr1 = malloc(sizeof(int) * (argc - 1));
-	arr2 = malloc(sizeof(int) * (argc - 1));
-	if (arr == NULL)
-		error();
-	i = 1;
-	while (i < argc)
-		add argv[i] to array;
-	execute intruction(get next line(stdin));
-	i = 2;
-	while (i < argc)
-		if (argv[i] < argv[i -1])
-			return (KO);
-	if (arr2 is not empty)
-		return (KO);
+	Create Stack A;
+	Create Stack B;
+	Fill Stack A;
+	if (Element in not integer of duplicate);
+		if (instruction == Error\n)
+			return OK;
+		if (instruction != Error\n)
+			return KO;
+	while (get_next_line(stdin) == something)
+		if (something == valid instruction)
+			execute intruction;
+		else
+			return KO;
+	if (Stack B is not empty)
+		return KO;
+	if (Stack A is not sorted)
+		return KO;
 	return OK;
 }
 
