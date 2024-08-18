@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   lst_free_all.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/15 18:35:49 by kweihman          #+#    #+#             */
-/*   Updated: 2024/05/15 18:39:03 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/18 13:13:42 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/18 13:22:42 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "checker.h"
 
-/*Iterates the list ’lst’ and applies the function
-’f’ on the content of each node.*/
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+void	lst_free_all(t_list *node)
 {
-	while (lst != NULL)
+	t_list	*tmp;
+
+	while (node != NULL)
 	{
-		f(lst->content);
-		lst = lst->next;
+		tmp = node->next;
+		free(node);
+		node = tmp;
 	}
 }

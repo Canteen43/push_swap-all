@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   strsame.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/15 14:46:35 by kweihman          #+#    #+#             */
-/*   Updated: 2024/05/15 14:54:08 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/18 14:12:57 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/18 14:13:12 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "checker.h"
 
-/*Adds the node ’new’ at the beginning of the list.*/
-void	ft_lstadd_front(t_list **lst, t_list *new)
+int	strsame(char *str1, char *str2)
 {
-	new->next = *lst;
-	*lst = new;
+	if (!str1 || !str2)
+		return (0);
+	while (*str1 && *str2)
+	{
+		if (*str1 != *str2)
+			return (0);
+		str1++;
+		str2++;
+	}
+	if (*str1 != *str2)
+		return (0);
+	return (1);
 }

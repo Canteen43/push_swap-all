@@ -1,3 +1,4 @@
 To do:
-	my program needs to free all its nodes
+	Handle free of GNL error return
+		see handle stack function
 	insert GNL in project

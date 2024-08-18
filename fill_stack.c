@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   fill_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/15 15:01:42 by kweihman          #+#    #+#             */
-/*   Updated: 2024/05/19 15:33:14 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/18 13:30:32 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/18 13:30:56 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "checker.h"
 
-/*Returns the last node of the list.*/
-t_list	*ft_lstlast(t_list *lst)
+int	fill_stack(int argc, char *argv[], t_list **phead)
 {
-	if (!lst)
-		return (NULL);
-	while (lst->next)
-		lst = lst->next;
-	return (lst);
+	int	i;
+	int	value;
+
+	i = 1;
+	while (i < argc)
+	{
+		if (set_int(argv[i], &value) == -1)
+			return (-1);
+		if (last_incl_val(*phead, value) == 1)
+			return (-1);
+		if (lst_new_to_back(phead, value) == -1)
+			return (-1);
+		i++;
+	}
+	return (0);
 }

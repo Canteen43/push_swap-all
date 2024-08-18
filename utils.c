@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 16:22:08 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/18 12:13:26 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/18 14:13:23 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,18 +68,4 @@ int	lmt_check(int value, char next)
 			if (INT_MIN % value > next - '0')
 				return (-1);
 	}
-}
-
-int	strsame(char *str1, char *str2)
-{
-	while (*str1 && *str2)
-	{
-		if (*str1 != *str2)
-			return (0);
-		str1++;
-		str2++;
-	}
-	if (*str1 != *str2)
-		return (0);
-	return (1);
 }
