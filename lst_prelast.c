@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lst_new_to_back.c                                  :+:      :+:    :+:   */
+/*   lst_prelast.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/17 15:38:19 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/17 18:34:55 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/17 15:54:23 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/18 12:11:28 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-/*This function should take the head of a list and add a new node with value
- value to its end. If the list is empty it should make the new node the head.*/
-int	lst_new_to_back(t_list **phead, int value)
+t_list	*lst_prelast(t_list *node)
 {
-	t_list	*new;
+	t_list	*last;
 
-	new = lst_new(value);
-	if (new == NULL)
-		return (-1);
-	if (*phead == NULL)
-	{
-		*phead = new;
-		return (0);
-	}
-	lst_last(*phead)->next = new;
+	last = lst_last(node);
+	if (last == NULL)
+		return (NULL);
+	while (node->next != last)
+		node = node->next;
+	return (node);
 }

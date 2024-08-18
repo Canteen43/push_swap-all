@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lst_new_to_back.c                                  :+:      :+:    :+:   */
+/*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/17 15:38:19 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/17 18:34:55 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/18 10:48:10 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/18 10:54:29 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-/*This function should take the head of a list and add a new node with value
- value to its end. If the list is empty it should make the new node the head.*/
-int	lst_new_to_back(t_list **phead, int value)
+/*Take the first element at the top of 2 and put it at the top of 1.*/
+void	push(t_list **phead1, t_list **phead2)
 {
-	t_list	*new;
+	t_list	*tmp;
 
-	new = lst_new(value);
-	if (new == NULL)
-		return (-1);
-	if (*phead == NULL)
-	{
-		*phead = new;
-		return (0);
-	}
-	lst_last(*phead)->next = new;
+	if (*phead2 == NULL)
+		return ;
+	tmp = *phead2;
+	*phead2 = (*phead2)->next;
+	tmp->next = *phead1;
+	*phead1 = tmp;
 }

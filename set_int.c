@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lst_new_to_back.c                                  :+:      :+:    :+:   */
+/*   set_int.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/17 15:38:19 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/17 18:34:55 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/18 12:12:27 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/18 12:12:52 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-/*This function should take the head of a list and add a new node with value
- value to its end. If the list is empty it should make the new node the head.*/
-int	lst_new_to_back(t_list **phead, int value)
+int	set_int(char *str, int *p_value)
 {
-	t_list	*new;
+	int	factor;
 
-	new = lst_new(value);
-	if (new == NULL)
-		return (-1);
-	if (*phead == NULL)
+	*p_value = 0;
+	factor = 1;
+	if (*str == '-')
 	{
-		*phead = new;
-		return (0);
+		factor = -1;
+		str++;
 	}
-	lst_last(*phead)->next = new;
+	while (*str)
+	{
+		if (char_in_str(*str, "0123456789") == 0)
+			return (-1);
+		if (lmt_check(*p_value, *str) == -1)
+			return (-1);
+		*p_value = *p_value * 10 + factor * (*str - '0');
+	}
 }

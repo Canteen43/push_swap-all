@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lst_new_to_back.c                                  :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/17 15:38:19 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/17 18:34:55 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/17 18:38:48 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/17 19:39:21 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-/*This function should take the head of a list and add a new node with value
- value to its end. If the list is empty it should make the new node the head.*/
-int	lst_new_to_back(t_list **phead, int value)
+void	swap(t_list **phead)
 {
-	t_list	*new;
+	t_list	*tmp;
 
-	new = lst_new(value);
-	if (new == NULL)
-		return (-1);
 	if (*phead == NULL)
-	{
-		*phead = new;
-		return (0);
-	}
-	lst_last(*phead)->next = new;
+		return ;
+	if ((*phead)->next == NULL)
+		return ;
+	tmp = (*phead)->next->next;
+	(*phead)->next->next = *phead;
+	(*phead) = (*phead)->next;
+	(*phead)->next->next = tmp;
 }

@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 12:51:20 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/17 17:59:48 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/18 12:11:08 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,32 +16,41 @@ int	main(int argc, char *argv[])
 {
 	t_list	*head_a;
 	t_list	*head_b;
-	int		i;
-	int		value;
+	char	*str;
 
 	head_a = NULL;
 	head_b = NULL;
-	i = 1;
-	if (fill_stack(argc, argv, head_a) == -1)
+	if (fill_stack(argc, argv, &head_a) == -1)
 	{
-		if (get_next_line(stdin) == Error && get_next_line(stdin) == nothing)
-			return OK;
-		else
-			return KO;
+		if (get_next_line(2) == "Error\n" && get_next_line(2) == NULL)
+			if (get_next_line(1) == NULL)
+				return (success());
+		return (failure());
 	}
-	while (get_next_line(stdin) == something)
-		if (something == valid instruction)
-			execute intruction;
-		else
-			return KO;
-	if (Stack B is not empty)
-		return KO;
-	if (Stack A is not sorted)
-		return KO;
-	return OK;
+	while (1)
+	{
+		str = get_next_line(0);
+	}
+	if (head_b != NULL)
+		return (failure());
+	if (!lst_sorted(head_a))
+		return (failure());
+	return (success());
 }
 
-int	fill_stack(int argc, char *argv[], t_list *head_a)
+int	success(void)
+{
+	write(1, "OK", 2);
+	return (0);
+}
+
+int	failure(void)
+{
+	write(1, "KO", 2);
+	return (1);
+}
+
+int	fill_stack(int argc, char *argv[], t_list **phead)
 {
 	int	i;
 	int	value;
@@ -51,7 +60,10 @@ int	fill_stack(int argc, char *argv[], t_list *head_a)
 	{
 		if (set_int(argv[i], &value) == -1)
 			return (-1);
-		lst_new_to_back(head_a, value);
+		if (last_incl_val(*phead, value) == 1)
+			return (-1);
+		if (lst_new_to_back(phead, value) == -1)
+			return (-1);
 		i++;
 	}
 	return (0);

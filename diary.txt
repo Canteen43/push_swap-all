@@ -1,4 +1,4 @@
 To do:
-	check how creating two separate lists would work with my libft functions.
-		would i just create NULL pointers to the head or something like that?
-	write own functions that use integer content struct.
+	write function that checks if A is sorted
+	write logic for GNL loop
+	insert GNL in project
