@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 12:51:20 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/18 12:11:08 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/18 13:08:18 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,8 @@ int	main(int argc, char *argv[])
 				return (success());
 		return (failure());
 	}
-	while (1)
-	{
-		str = get_next_line(0);
-	}
+	if (get_ops(&head_a, &head_b) == -1)
+		return (failure());
 	if (head_b != NULL)
 		return (failure());
 	if (!lst_sorted(head_a))

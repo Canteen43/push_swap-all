@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 13:25:59 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/18 12:13:18 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/18 13:08:42 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ void	swap(t_list **phead);
 int		last_incl_val(t_list *node, int value);
 int		lst_sorted(t_list *node);
 int		set_int(char *str, int *p_value);
+int		execute(t_list **pheada, t_list **pheadb, char *str);
+int		get_ops(t_list **head_a, t_list **head_b);
 
 #endif	// CHECKER_H

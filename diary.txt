@@ -1,4 +1,3 @@
 To do:
-	write function that checks if A is sorted
-	write logic for GNL loop
+	my program needs to free all its nodes
 	insert GNL in project
