@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.h                                          :+:      :+:    :+:   */
+/*   header.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 13:25:59 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/18 13:31:18 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/19 11:11:08 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHECKER_H
-# define CHECKER_H
+#ifndef HEADER_H
+# define HEADER_H
 
 # include <limits.h>	//INT_MAX, INT_MIN
 # include <unistd.h>	//write()
@@ -37,5 +37,6 @@ int		set_int(char *str, int *p_value);
 int		execute(t_list **pheada, t_list **pheadb, char *str);
 int		get_ops(t_list **head_a, t_list **head_b);
 int		fill_stack(int argc, char *argv[], t_list **phead);
+int		streqfr2(char *str, char *str2);
 
-#endif	// CHECKER_H
+#endif	// HEADER_H

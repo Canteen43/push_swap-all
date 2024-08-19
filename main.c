@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 12:51:20 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/18 15:04:05 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/19 10:37:35 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,10 @@ int	main(int argc, char *argv[])
 	head_b = NULL;
 	if (fill_stack(argc, argv, &head_a) == -1)
 	{
-		if (strsame(get_next_line(2), "Error\n") && get_next_line(2) == NULL)
-			if (get_next_line(1) == NULL)
-				return (success(head_a, head_b));
+		if (streqfr2("Error\n", get_next_line(2)))
+			if (streqfr2(get_next_line(2), NULL))
+				if (streqfr2(get_next_line(0), NULL))
+					return (success(head_a, head_b));
 		return (failure(head_a, head_b));
 	}
 	if (get_ops(&head_a, &head_b) == -1)

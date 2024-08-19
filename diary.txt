@@ -1,4 +1,4 @@
 To do:
-	Handle free of GNL error return
-		see handle stack function
 	insert GNL in project
+		makefile
+		look at makefile from printf and libft
