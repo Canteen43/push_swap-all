@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   set_int.c                                          :+:      :+:    :+:   */
+/*   ft_set_int.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 12:12:27 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/18 12:12:52 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/21 12:15:38 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "header.h"
 
 int	set_int(char *str, int *p_value)
 {
@@ -30,5 +30,7 @@ int	set_int(char *str, int *p_value)
 		if (lmt_check(*p_value, *str) == -1)
 			return (-1);
 		*p_value = *p_value * 10 + factor * (*str - '0');
+		str++;
 	}
+	return (0);
 }

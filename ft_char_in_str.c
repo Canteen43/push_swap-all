@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strsame.c                                          :+:      :+:    :+:   */
+/*   ft_char_in_str.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/18 14:12:57 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/19 10:17:07 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/07 16:22:08 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/19 11:59:07 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "header.h"
 
-int	strsame(char *str1, char *str2)
+int	char_in_str(char c, char *s)
 {
-	if (!str1 && !str2)
-		return (1);
-	if (!str1 || !str2)
-		return (0);
-	while (*str1 && *str2)
+	while (*s)
 	{
-		if (*str1 != *str2)
-			return (0);
-		str1++;
-		str2++;
+		if (*s == c)
+			return (1);
+		s++;
 	}
-	if (*str1 != *str2)
-		return (0);
-	return (1);
+	return (0);
 }

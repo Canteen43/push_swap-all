@@ -1,53 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_lmt_check.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/07 16:22:08 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/18 14:13:23 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/19 11:47:40 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/19 12:00:52 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
-
-int	char_in_str(char c, char *s)
-{
-	while (*s)
-	{
-		if (*s == c)
-			return (1);
-		s++;
-	}
-	return (0);
-}
-
-int	chars_in_str(char *cs, char *s)
-{
-	while (*cs)
-	{
-		if (char_in_str(*cs, s) == 1)
-			return (1);
-		cs++;
-	}
-	return (0);
-}
-
-void	*ft_memset(void *s, int c, size_t n)
-{
-	void	*start;
-
-	start = s;
-	while (n-- > 0)
-		*(unsigned char *)s++ = c;
-	return (start);
-}
+#include "header.h"
 
 int	lmt_check(int value, char next)
 {
-	if (value == 0)
-		return (0);
 	if (value > 0)
 	{
 		if (INT_MAX / value < 10)
@@ -68,4 +34,5 @@ int	lmt_check(int value, char next)
 			if (INT_MIN % value > next - '0')
 				return (-1);
 	}
+	return (0);
 }

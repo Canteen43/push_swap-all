@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fill_stack.c                                    :+:      :+:    :+:   */
+/*   ft_lmt_check.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/18 13:30:32 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/19 11:28:28 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/19 11:47:40 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/19 12:00:52 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int	fill_stack(int argc, char *argv[], t_list **phead)
+int	lmt_check(int value, char next)
 {
-	int	i;
-	int	value;
-
-	i = 1;
-	while (i < argc)
+	if (value > 0)
 	{
-		if (set_int(argv[i], &value) == -1)
+		if (INT_MAX / value < 10)
 			return (-1);
-		if (last_incl_val(*phead, value) == 1)
+		if (INT_MAX / value > 10)
+			return (0);
+		if (INT_MAX / value == 10)
+			if (INT_MAX % value < next - '0')
+				return (-1);
+	}
+	if (value < 0)
+	{
+		if (INT_MIN / value < 10)
 			return (-1);
-		if (lst_new_to_back(phead, value) == -1)
-			return (-1);
-		i++;
+		if (INT_MIN / value > 10)
+			return (0);
+		if (INT_MIN / value == 10)
+			if (INT_MIN % value > next - '0')
+				return (-1);
 	}
 	return (0);
 }

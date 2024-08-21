@@ -1,4 +1,9 @@
+Ctrl D to stop providing input from stdin
+Otherwise it should keep reading lines.
+
+The checker works now!
+	(Although I find it stupid, that it prints error instead of checking if the
+	 program prints error).
+
 To do:
-	insert GNL in project
-		makefile
-		look at makefile from printf and libft
+	- start real push_swap

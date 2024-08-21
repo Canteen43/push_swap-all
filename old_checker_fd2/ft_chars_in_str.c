@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lst_prelast.c                                   :+:      :+:    :+:   */
+/*   ft_chars_in_str.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/17 15:54:23 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/19 11:28:28 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/19 11:49:16 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/19 11:49:38 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-t_list	*lst_prelast(t_list *node)
+int	chars_in_str(char *cs, char *s)
 {
-	t_list	*last;
-
-	last = lst_last(node);
-	if (last == NULL)
-		return (NULL);
-	while (node->next != last)
-		node = node->next;
-	return (node);
+	while (*cs)
+	{
+		if (char_in_str(*cs, s) == 1)
+			return (1);
+		cs++;
+	}
+	return (0);
 }

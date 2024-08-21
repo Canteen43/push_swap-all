@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lst_prelast.c                                   :+:      :+:    :+:   */
+/*   ft_set_int.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/17 15:54:23 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/19 11:28:28 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/18 12:12:27 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/19 12:01:49 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-t_list	*lst_prelast(t_list *node)
+int	set_int(char *str, int *p_value)
 {
-	t_list	*last;
+	int	factor;
 
-	last = lst_last(node);
-	if (last == NULL)
-		return (NULL);
-	while (node->next != last)
-		node = node->next;
-	return (node);
+	*p_value = 0;
+	factor = 1;
+	if (*str == '-')
+	{
+		factor = -1;
+		str++;
+	}
+	while (*str)
+	{
+		if (char_in_str(*str, "0123456789") == 0)
+			return (-1);
+		if (lmt_check(*p_value, *str) == -1)
+			return (-1);
+		*p_value = *p_value * 10 + factor * (*str - '0');
+	}
+	return (0);
 }
