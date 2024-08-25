@@ -42,6 +42,9 @@ SRC_FILES		+=	ft_set_int.c
 SRC_FILES		+=	ft_streq.c
 SRC_FILES		+=	ft_streqfr2.c
 SRC_FILES		+=	ft_swap.c
+SRC_FILES		+=	ft_simpsort.c
+SRC_FILES		+=	ft_lst_max.c
+SRC_FILES		+=	ft_lst_min.c
 
 # Object files
 OBJ_FILES 		=	$(SRC_FILES:%.c=$(OBJ_DIR)%.o)

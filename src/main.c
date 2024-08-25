@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/23 14:18:57 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/25 12:07:17 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/25 12:58:54 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ int	main(int argc, char *argv[])
 	var.head_b = NULL;
 	var.argn = argc;
 	var.argp = argv;
-	if (fill_stack(&var) == -1)
-		return (error(head_a, head_b));
-	simpsort(var);
-	lst_free_all(head_a);
-	lst_free_all(head_b);
+	if (fill_stack(&var, argc, argv) == -1)
+		return (error(&var));
+	simpsort(&var);
+	lst_free_all(var.head_a);
+	lst_free_all(var.head_b);
 	return (0);
 }
 
