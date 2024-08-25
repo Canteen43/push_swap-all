@@ -6,11 +6,11 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 12:12:27 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/19 12:01:49 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/23 14:43:42 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "../header.h"
 
 int	set_int(char *str, int *p_value)
 {

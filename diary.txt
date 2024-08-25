@@ -5,5 +5,20 @@ The checker works now!
 	(Although I find it stupid, that it prints error instead of checking if the
 	 program prints error).
 
+Split return:
+	for empty strings, split an array of strings the only consists
+	 the stop character. So I valid pointers to a pointer. The second
+	 pointer will be NULL.
+
 To do:
-	- start real push_swap
+	- first draft push_swap
+		simple sorting:
+			functions:
+				get min
+				get max
+				is sorted
+				step
+					is sorted
+					if first is bigger than second, swap
+						except first is max and second is min
+					rotate

@@ -6,11 +6,11 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 18:38:48 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/19 11:28:28 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/23 14:43:42 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "../header.h"
 
 void	swap(t_list **phead)
 {
