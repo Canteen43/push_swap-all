@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_reqmov.c                                        :+:      :+:    :+:   */
+/*   ft_iex.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/26 10:22:54 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 10:36:37 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/26 11:40:44 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/26 14:48:56 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int	reqmov(int len_a, int ind_a, int len_b, int ind_b)
+void	iex(t_var *var, int ia)
 {
-	int	ra;
-	int	rra;
-	int	rb;
-	int	rrb;
+	int		ib;
+	t_mov	*mov;
 
-	ra = ind_a;
-	rra = len_a - ind_a;
-	rb = ind_b;
-	rrb = len_b - ind_b;
-	return (min(4, (ra + rrb), max(2, ra, rb), (rra + rb), max(2, rra, rrb)));
+	ib = lst_bsni(lst_ivalue(var->head_a, ia), var->head_b);
+	setmov(mov, var, ia, ib);
+	exmov(var, mov);
+	push(var->head_a, var->head_b);
 }

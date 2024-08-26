@@ -1,44 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_bsni.c                                     :+:      :+:    :+:   */
+/*   ft_cheap.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/25 21:36:21 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 11:20:41 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/26 11:00:55 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/26 11:19:33 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-/* Returns index of biggest smaller numbers. */
-int	lst_bsni(int nbr, t_list *node)
+int	ft_cheap(t_var *var)
 {
-	int	bsn;
-	int	ind;
-	int	cur;
-	int	i;
+	int		mov_nbr;
+	int		ind;
+	int		i;
+	int		req;
+	t_list	*node;
 
-	bsn = node->value;
+	mov_nbr = INT_MAX;
 	ind = 0;
-	while (node != NULL)
+	i = 0;
+	node = var->head_a;
+	while (node)
 	{
-		cur = node->value;
-		if (bsn > nbr && cur > bsn)
-			set_bsn(&bsn, &ind, cur, i);
-		if (bsn > nbr && cur < nbr)
-			set_bsn(&bsn, &ind, cur, i);
-		if (bsn < nbr && cur > bsn && cur < nbr)
-			set_bsn(&bsn, &ind, cur, i);
+		req = reqmov(lst_len(var->head_a), i, lst_len(var->head_b), \
+		list_bsni(node->value, var->head_b));
+		if (req <= 1)
+			return (i);
+		if (req < mov_nbr)
+		{
+			mov_nbr = req;
+			ind = i;
+		}
 		node = node->next;
 		i++;
 	}
 	return (ind);
-}
-
-static void	set_bsn(int *p_bsn, int *p_ind, int cur, int i)
-{
-	*p_bsn = cur;
-	*p_ind = i;
 }

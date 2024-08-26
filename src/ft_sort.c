@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_reqmov.c                                        :+:      :+:    :+:   */
+/*   ft_sort.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/26 10:22:54 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 10:36:37 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/26 10:53:21 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/26 15:27:55 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int	reqmov(int len_a, int ind_a, int len_b, int ind_b)
+void	ft_sort(t_var *var)
 {
-	int	ra;
-	int	rra;
-	int	rb;
-	int	rrb;
+	t_list	*node;
+	int		ia;
 
-	ra = ind_a;
-	rra = len_a - ind_a;
-	rb = ind_b;
-	rrb = len_b - ind_b;
-	return (min(4, (ra + rrb), max(2, ra, rb), (rra + rb), max(2, rra, rrb)));
+	if (is_sorted(var->head_a))
+		return ;
+	node = var->head_a;
+	ia = 0;
+	while (node)
+	{
+		iex(var, ia);
+		node = node->next;
+		ia++;
+	}
+	rotb(var);
 }

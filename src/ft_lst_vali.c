@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_reqmov.c                                        :+:      :+:    :+:   */
+/*   ft_lst_vali.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/26 10:22:54 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 10:36:37 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/26 15:20:33 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/26 15:21:34 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int	reqmov(int len_a, int ind_a, int len_b, int ind_b)
+int	lst_vali(t_list *head, int val)
 {
-	int	ra;
-	int	rra;
-	int	rb;
-	int	rrb;
+	t_list	*node;
+	int		i;
 
-	ra = ind_a;
-	rra = len_a - ind_a;
-	rb = ind_b;
-	rrb = len_b - ind_b;
-	return (min(4, (ra + rrb), max(2, ra, rb), (rra + rb), max(2, rra, rrb)));
+	node = head;
+	i = 0;
+	while (node)
+	{
+		if (node->value == val)
+			return (i);
+		node = node->next;
+		i++;
+	}
+	return (-1);
 }

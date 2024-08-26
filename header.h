@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 13:25:59 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 10:29:47 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/26 12:10:10 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,16 @@
 # include <stdlib.h>	//free(), malloc()
 # include <stdbool.h>	//true, false
 # include <stdarg.h>	//va_start(), va_arg(), va_end()
+
+typedef struct s_moves
+{
+	int				ra;
+	int				rra;
+	int				rb;
+	int				rrb;
+	int				rr;
+	int				rrr;
+}					t_mov;
 
 typedef struct s_list
 {

@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_reqmov.c                                        :+:      :+:    :+:   */
+/*   ft_rotb.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/26 10:22:54 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 10:36:37 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/26 15:17:34 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/26 15:27:41 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int	reqmov(int len_a, int ind_a, int len_b, int ind_b)
+void	rotb(t_var *var)
 {
-	int	ra;
-	int	rra;
-	int	rb;
-	int	rrb;
+	int	imax;
+	int	len;
 
-	ra = ind_a;
-	rra = len_a - ind_a;
-	rb = ind_b;
-	rrb = len_b - ind_b;
-	return (min(4, (ra + rrb), max(2, ra, rb), (rra + rb), max(2, rra, rrb)));
+	imax = lst_vali(var->head_b, lst_max(var->head_b));
+	len = lst_len(var->head_b);
+	if (imax < len / 2)
+	{
+		while (imax-- > 0)
+		{
+			rotate(var->head_b);
+			ft_putstr("rb\n");
+		}
+	}
+	else
+	{
+		while (imax++ < len)
+		{
+			revrot(var->head_b);
+			ft_putstr("rrb\n");
+		}
+	}
 }

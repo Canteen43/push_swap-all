@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_reqmov.c                                        :+:      :+:    :+:   */
+/*   ft_imin.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/26 10:22:54 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 10:36:37 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/26 14:05:42 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/26 14:30:42 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int	reqmov(int len_a, int ind_a, int len_b, int ind_b)
+int	imin(int nbr, ...)
 {
-	int	ra;
-	int	rra;
-	int	rb;
-	int	rrb;
+	va_list	args;
+	int		min;
+	int		tmp;
+	int		i;
+	int		ind;
 
-	ra = ind_a;
-	rra = len_a - ind_a;
-	rb = ind_b;
-	rrb = len_b - ind_b;
-	return (min(4, (ra + rrb), max(2, ra, rb), (rra + rb), max(2, rra, rrb)));
+	va_start(args, nbr);
+	min = va_arg(args, int);
+	i = 2;
+	while (i <= nbr)
+	{
+		tmp = va_arg(args, int);
+		if (tmp < min)
+		{
+			min = tmp;
+			ind = i;
+		}
+		i++;
+	}
+	va_end(args);
+	return (ind);
 }

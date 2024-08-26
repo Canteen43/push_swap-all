@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_reqmov.c                                        :+:      :+:    :+:   */
+/*   ft_ipush.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/26 10:22:54 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 10:36:37 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/26 11:24:15 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/26 11:30:36 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int	reqmov(int len_a, int ind_a, int len_b, int ind_b)
+void	ft_ipush(t_var *var, int ind)
 {
-	int	ra;
-	int	rra;
-	int	rb;
-	int	rrb;
+	t_list	*node;
+	int		i;
 
-	ra = ind_a;
-	rra = len_a - ind_a;
-	rb = ind_b;
-	rrb = len_b - ind_b;
-	return (min(4, (ra + rrb), max(2, ra, rb), (rra + rb), max(2, rra, rrb)));
+	node = var->head_a;
+	i = 0;
+	while (i < ind)
+	{
+		node = node->next;
+		i++;
+	}
+	if (node->value < var->pivot)
+	{
+		ft_pb(var);
+		ft_putstr("pb\n");
+	}
+	else
+	{
+		ft_ra(var);
+		ft_putstr("ra\n");
+	}
 }
