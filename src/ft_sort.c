@@ -6,13 +6,13 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 10:53:21 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 15:27:55 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/26 16:15:39 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "../header.h"
 
-void	ft_sort(t_var *var)
+void	sort(t_var *var)
 {
 	t_list	*node;
 	int		ia;
@@ -28,4 +28,5 @@ void	ft_sort(t_var *var)
 		ia++;
 	}
 	rotb(var);
+	pushback(var);
 }

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lst_ivalue.c                                    :+:      :+:    :+:   */
+/*   ft_lst_ival.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 11:42:24 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 11:43:28 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/26 16:15:39 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "../header.h"
 
-int	lst_ivalue(t_list *head, int ind)
+int	lst_ival(t_list *head, int ind)
 {
 	t_list	*node;
 	int		i;

@@ -6,11 +6,11 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 12:07:57 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 14:30:10 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/26 16:15:39 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "../header.h"
 
 static void	option1(t_mov *mov);
 static void	option2(t_mov *mov);

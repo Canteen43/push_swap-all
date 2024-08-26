@@ -6,11 +6,11 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 10:12:50 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 10:16:00 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/26 16:15:39 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "../header.h"
 
 int	lst_len(t_list *node)
 {

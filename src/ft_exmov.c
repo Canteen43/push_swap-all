@@ -6,11 +6,11 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 14:31:51 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 14:47:46 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/26 16:15:39 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "../header.h"
 
 static void	exmov1(t_var *var, t_mov *mov);
 static void	exmov2(t_var *var, t_mov *mov);

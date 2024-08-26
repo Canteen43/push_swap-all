@@ -1,37 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ipush.c                                         :+:      :+:    :+:   */
+/*   ft_pushback.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/26 11:24:15 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 11:30:36 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/26 16:09:34 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/26 16:15:39 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "../header.h"
 
-void	ft_ipush(t_var *var, int ind)
+void	pushback(t_var *var)
 {
-	t_list	*node;
-	int		i;
-
-	node = var->head_a;
-	i = 0;
-	while (i < ind)
+	while (var->head_b)
 	{
-		node = node->next;
-		i++;
-	}
-	if (node->value < var->pivot)
-	{
-		ft_pb(var);
-		ft_putstr("pb\n");
-	}
-	else
-	{
-		ft_ra(var);
-		ft_putstr("ra\n");
+		push(&(var->head_a), &(var->head_a));
+		ft_putstr("pa\n");
 	}
 }

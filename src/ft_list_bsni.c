@@ -6,11 +6,11 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/25 21:36:21 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 11:20:41 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/26 16:15:39 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "../header.h"
 
 /* Returns index of biggest smaller numbers. */
 int	lst_bsni(int nbr, t_list *node)

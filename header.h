@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 13:25:59 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 12:10:10 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/26 16:05:58 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,6 @@ int		chars_in_str(char *cs, char *s);
 int		lmt_check(int value, char next);
 void	ft_putstr_fd(char *s, int fd);
 void	simpsort(t_var *var);
+void	sort(t_var *var);
 
 #endif	// HEADER_H
