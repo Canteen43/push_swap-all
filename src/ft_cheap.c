@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 11:00:55 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 16:15:39 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/26 16:18:02 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_cheap(t_var *var)
 	while (node)
 	{
 		req = reqmov(lst_len(var->head_a), i, lst_len(var->head_b), \
-		list_bsni(node->value, var->head_b));
+		lst_bsni(node->value, var->head_b));
 		if (req <= 1)
 			return (i);
 		if (req < mov_nbr)

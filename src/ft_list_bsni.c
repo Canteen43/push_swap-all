@@ -6,11 +6,13 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/25 21:36:21 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 16:15:39 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/26 16:22:59 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header.h"
+
+static void	set_bsn(int *p_bsn, int *p_ind, int cur, int i);
 
 /* Returns index of biggest smaller numbers. */
 int	lst_bsni(int nbr, t_list *node)
@@ -22,6 +24,7 @@ int	lst_bsni(int nbr, t_list *node)
 
 	bsn = node->value;
 	ind = 0;
+	i = 0;
 	while (node != NULL)
 	{
 		cur = node->value;

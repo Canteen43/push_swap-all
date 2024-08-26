@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 13:25:59 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 16:05:58 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/26 16:24:15 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,8 @@ int		lst_incl_val(t_list *node, int value);
 int		lst_min(t_list *node);
 int		lst_max(t_list *node);
 int		lst_len(t_list *node);
+int		lst_bsni(int nbr, t_list *node);
+int		lst_ival(t_list *head, int ind);
 void	push(t_list **phead1, t_list **phead2);
 void	revrot(t_list **phead);
 void	rotate(t_list **phead);
@@ -76,5 +78,10 @@ int		lmt_check(int value, char next);
 void	ft_putstr_fd(char *s, int fd);
 void	simpsort(t_var *var);
 void	sort(t_var *var);
+int		reqmov(int len_a, int ind_a, int len_b, int ind_b);
+void	setmov(t_mov *mov, t_var *var, int ia, int ib);
+void	exmov(t_var *var, t_mov *mov);
+int		min(int nbr, ...);
+int		max(int nbr, ...);
 
 #endif	// HEADER_H
