@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 13:25:59 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/25 13:04:49 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/26 10:29:47 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <unistd.h>	//write()
 # include <stdlib.h>	//free(), malloc()
 # include <stdbool.h>	//true, false
+# include <stdarg.h>	//va_start(), va_arg(), va_end()
 
 typedef struct s_list
 {
@@ -45,6 +46,7 @@ void	lst_free_all(t_list *node);
 int		lst_incl_val(t_list *node, int value);
 int		lst_min(t_list *node);
 int		lst_max(t_list *node);
+int		lst_len(t_list *node);
 void	push(t_list **phead1, t_list **phead2);
 void	revrot(t_list **phead);
 void	rotate(t_list **phead);
