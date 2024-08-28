@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 13:25:59 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/28 11:25:57 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/28 13:57:14 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,8 @@ void	exmov(t_var *var, t_mov *mov);
 int		min(int nbr, ...);
 int		max(int nbr, ...);
 int		imin(int nbr, ...);
-void	rotb(t_var *var);
+void	rot_a(t_var *var);
+void	rot_b(t_var *var);
 void	iex(t_var *var, int ia);
 void	pushback(t_var *var);
 int		cheapest(t_var *var);

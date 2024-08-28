@@ -6,13 +6,13 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 15:17:34 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/28 10:04:10 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/28 13:51:54 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header.h"
 
-void	rotb(t_var *var)
+void	rot_b(t_var *var)
 {
 	int	imax;
 	int	len;
