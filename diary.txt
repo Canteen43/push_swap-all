@@ -11,15 +11,6 @@ Split return:
 	 pointer will be NULL.
 
 To do:
-	Add rule for small numbers
-		3 numbers -> 3 moves
-			write algorithm for sorting three moves
-		5 numbers -> 12 moves
-			push minimum: max 2 rotations plus push = 3 moves
-			push new minimum: max 2 rotations plus push = 3 moves
-			sort 3 = 2 moves
-			push back new min and min = 2 moves
-			total 10 moves
-	Fix get next line part
+	Fix ft_split part
 	Go through eval sheet
 

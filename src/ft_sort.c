@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 10:53:21 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/28 12:31:26 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/28 13:59:33 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ void	sort(t_var *var)
 	node = var->head_a;
 	while (var->head_a)
 		iex(var, cheapest(var));
-	rotb(var);
+	rot_b(var);
 	pushback(var);
 }

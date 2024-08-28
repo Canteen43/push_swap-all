@@ -56,10 +56,12 @@ SRC_FILES += ft_max.c
 SRC_FILES += ft_min.c
 SRC_FILES += ft_pushback.c
 SRC_FILES += ft_reqmov.c
-SRC_FILES += ft_rotb.c
 SRC_FILES += ft_setmov.c
 SRC_FILES += ft_sort.c
 SRC_FILES += ft_exmov.c
+SRC_FILES += ft_quicksort.c
+SRC_FILES += ft_rot_a.c
+SRC_FILES += ft_rot_b.c
 
 # Object files
 OBJ_FILES 		=	$(SRC_FILES:%.c=$(OBJ_DIR)%.o)

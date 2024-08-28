@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 12:31:51 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/28 13:56:57 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/28 14:02:22 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,8 @@ static void	quicksort3(t_var *var);
 static void	quicksort4(t_var *var);
 static void	quicksort5(t_var *var);
 
-void	quick_sort(t_var *var)
+void	quicksort(t_var *var)
 {
-	t_list	*node;
-	int		ia;
-
 	if (lst_len(var->head_a) == 2)
 		quicksort2(var);
 	if (lst_len(var->head_a) == 3)
@@ -47,12 +44,12 @@ static void	quicksort3(t_var *var)
 	imax = lst_vali(var->head_a, lst_max(var->head_a));
 	if (imin - imax != 1)
 		quicksort2(var);
-	rot_a(&var->head_a);
+	rot_a(var);
 }
 
 static void	quicksort4(t_var *var)
 {
-	rot_a(&var->head_a);
+	rot_a(var);
 	push(&var->head_b, &var->head_a);
 	ft_putstr_fd("pb\n", 1);
 	quicksort3(var);
@@ -62,7 +59,7 @@ static void	quicksort4(t_var *var)
 
 static void	quicksort5(t_var *var)
 {
-	rot_a(&var->head_a);
+	rot_a(var);
 	push(&var->head_b, &var->head_a);
 	ft_putstr_fd("pb\n", 1);
 	quicksort4(var);
