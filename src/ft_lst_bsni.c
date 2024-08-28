@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_bsni.c                                     :+:      :+:    :+:   */
+/*   ft_lst_bsni.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/25 21:36:21 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 16:22:59 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/28 10:23:56 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	set_bsn(int *p_bsn, int *p_ind, int cur, int i);
 
-/* Returns index of biggest smaller numbers. */
+/* Returns index of biggest smaller number. */
 int	lst_bsni(int nbr, t_list *node)
 {
 	int	bsn;

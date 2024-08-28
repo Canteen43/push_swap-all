@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 15:17:34 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 16:15:39 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/28 10:04:10 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,16 @@ void	rotb(t_var *var)
 	{
 		while (imax-- > 0)
 		{
-			rotate(var->head_b);
-			ft_putstr("rb\n");
+			rotate(&var->head_b);
+			ft_putstr_fd("rb\n", 1);
 		}
 	}
 	else
 	{
 		while (imax++ < len)
 		{
-			revrot(var->head_b);
-			ft_putstr("rrb\n");
+			revrot(&var->head_b);
+			ft_putstr_fd("rrb\n", 1);
 		}
 	}
 }

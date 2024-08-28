@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 10:53:21 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 16:15:39 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/28 10:32:41 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ void	sort(t_var *var)
 	t_list	*node;
 	int		ia;
 
-	if (is_sorted(var->head_a))
+	if (lst_sorted(var->head_a))
 		return ;
+	push(&var->head_b, &var->head_a);
+	ft_putstr_fd("pb\n", 1);
 	node = var->head_a;
 	ia = 0;
 	while (node)

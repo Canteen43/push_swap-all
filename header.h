@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 13:25:59 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 16:24:15 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/28 10:20:40 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,11 @@ typedef struct s_var
 	t_list	*head_b;
 }	t_var;
 
+/*Function prototypes*/
 t_list	*lst_last(t_list *node);
-int		lst_new_to_back(t_list **phead, int value);
 t_list	*lst_new(int value);
 t_list	*lst_prelast(t_list *node);
+int		lst_new_to_back(t_list **phead, int value);
 void	lst_free_all(t_list *node);
 int		lst_incl_val(t_list *node, int value);
 int		lst_min(t_list *node);
@@ -59,6 +60,7 @@ int		lst_max(t_list *node);
 int		lst_len(t_list *node);
 int		lst_bsni(int nbr, t_list *node);
 int		lst_ival(t_list *head, int ind);
+int		lst_vali(t_list *head, int val);
 void	push(t_list **phead1, t_list **phead2);
 void	revrot(t_list **phead);
 void	rotate(t_list **phead);
@@ -83,5 +85,9 @@ void	setmov(t_mov *mov, t_var *var, int ia, int ib);
 void	exmov(t_var *var, t_mov *mov);
 int		min(int nbr, ...);
 int		max(int nbr, ...);
+int		imin(int nbr, ...);
+void	rotb(t_var *var);
+void	iex(t_var *var, int ia);
+void	pushback(t_var *var);
 
 #endif	// HEADER_H

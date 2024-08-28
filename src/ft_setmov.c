@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 12:07:57 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 16:15:39 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/28 10:41:06 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ void	setmov(t_mov *mov, t_var *var, int ia, int ib)
 	mov->rrb = lst_len(var->head_b) - ib;
 	mov->rr = 0;
 	mov->rrr = 0;
-	option = imin(4, mov->ra + mov->rrb, max(mov->ra, mov->rb), \
-	mov->rra + mov->rb, max(mov->rra, mov->rrb));
+	option = imin(4, mov->ra + mov->rrb, max(2, mov->ra, mov->rb), \
+	mov->rra + mov->rb, max(2, mov->rra, mov->rrb));
 	if (option == 1)
 		option1(mov);
 	if (option == 2)
@@ -69,7 +69,7 @@ static void	option3(t_mov *mov)
 	mov->rrb = 0;
 }
 
-static void	option2(t_mov *mov)
+static void	option4(t_mov *mov)
 {
 	if (mov->rra > mov->rrb)
 	{
