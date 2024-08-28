@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 10:53:21 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/28 11:27:58 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/28 12:31:26 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@ void	sort(t_var *var)
 
 	if (lst_sorted(var->head_a))
 		return ;
+	if (lst_len(var->head_a) <= 5)
+	{
+		quicksort(var);
+		return ;
+	}
 	push(&var->head_b, &var->head_a);
 	ft_putstr_fd("pb\n", 1);
 	node = var->head_a;
