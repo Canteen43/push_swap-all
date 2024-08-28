@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 13:25:59 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/28 10:20:40 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/28 11:25:57 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,6 @@ int		imin(int nbr, ...);
 void	rotb(t_var *var);
 void	iex(t_var *var, int ia);
 void	pushback(t_var *var);
+int		cheapest(t_var *var);
 
 #endif	// HEADER_H

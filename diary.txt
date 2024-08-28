@@ -10,15 +10,5 @@ Split return:
 	 the stop character. So I valid pointers to a pointer. The second
 	 pointer will be NULL.
 
-To do:
-	- first draft push_swap
-		simple sorting:
-			functions:
-				get min
-				get max
-				is sorted
-				step
-					is sorted
-					if first is bigger than second, swap
-						except first is max and second is min
-					rotate
+push_swap outputs instructions now but they are a little stupid. I need to
+ rework the move setter.

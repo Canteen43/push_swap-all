@@ -6,13 +6,13 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 11:00:55 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/26 16:18:02 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/28 11:25:36 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header.h"
 
-int	ft_cheap(t_var *var)
+int	cheapest(t_var *var)
 {
 	int		mov_nbr;
 	int		ind;
