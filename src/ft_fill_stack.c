@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 13:30:32 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/25 13:28:02 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/31 15:17:02 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ int	fill_stack(t_var *var, int argc, char *argv[])
 	return (rtn_free_split(0, var));
 }
 
-/*I have not considered the case that ft_split might fail.*/
 int	set_arr(t_var *var, int argc, char *argv[])
 {
 	if (argc == 2)
@@ -77,7 +76,7 @@ void	free_split(char **ptr)
 		return ;
 	while (*(ptr + i) != NULL)
 	{
-		free(*ptr + i);
+		free(*(ptr + i));
 		i++;
 	}
 	free(ptr);
