@@ -11,6 +11,10 @@ Split return:
 	 pointer will be NULL.
 
 To do:
-	Fix ft_split part
-	Go through eval sheet
-
+	There seems to be an issue with my sort five algorithm
+		I should never rotate three times, two is sufficient for getting min
+		 to the top
+		I could check if the thing is sorted inbetween
+		I somehow rotated in test 102 even though it was well 
+	check the algorithm for big lists
+	I get error TLE for testing with 100 and 500
