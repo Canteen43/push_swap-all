@@ -10,11 +10,10 @@ Split return:
 	 the stop character. So I valid pointers to a pointer. The second
 	 pointer will be NULL.
 
+Sort-5 has been successfully fixed.
+
 To do:
-	There seems to be an issue with my sort five algorithm
-		I should never rotate three times, two is sufficient for getting min
-		 to the top
-		I could check if the thing is sorted inbetween
-		I somehow rotated in test 102 even though it was well 
-	check the algorithm for big lists
-	I get error TLE for testing with 100 and 500
+	Big lists are sometimes not sorted correctly.
+		Why?
+	I get TLE for the tester
+		Test at 42

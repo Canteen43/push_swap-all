@@ -19,7 +19,7 @@ void	rot_a(t_var *var)
 
 	imin = lst_vali(var->head_a, lst_min(var->head_a));
 	len = lst_len(var->head_a);
-	if (imin < len / 2)
+	if (imin <= len / 2)
 	{
 		while (imin-- > 0)
 		{

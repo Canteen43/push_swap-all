@@ -14,8 +14,6 @@
 
 void	sort(t_var *var)
 {
-	t_list	*node;
-
 	if (lst_sorted(var->head_a))
 		return ;
 	if (lst_len(var->head_a) <= 5)
@@ -25,7 +23,6 @@ void	sort(t_var *var)
 	}
 	push(&var->head_b, &var->head_a);
 	ft_putstr_fd("pb\n", 1);
-	node = var->head_a;
 	while (var->head_a)
 		iex(var, cheapest(var));
 	rot_b(var);

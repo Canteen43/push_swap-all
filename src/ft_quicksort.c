@@ -31,6 +31,8 @@ void	quicksort(t_var *var)
 
 static void	quicksort2(t_var *var)
 {
+	if (lst_sorted(var->head_a))
+		return ;
 	swap(&var->head_a);
 	ft_putstr_fd("sa\n", 1);
 }
@@ -40,6 +42,8 @@ static void	quicksort3(t_var *var)
 	int	imin;
 	int	imax;
 
+	if (lst_sorted(var->head_a))
+		return ;
 	imin = lst_vali(var->head_a, lst_min(var->head_a));
 	imax = lst_vali(var->head_a, lst_max(var->head_a));
 	if (imin - imax != 1)
@@ -49,6 +53,8 @@ static void	quicksort3(t_var *var)
 
 static void	quicksort4(t_var *var)
 {
+	if (lst_sorted(var->head_a))
+		return ;
 	rot_a(var);
 	push(&var->head_b, &var->head_a);
 	ft_putstr_fd("pb\n", 1);
@@ -59,6 +65,8 @@ static void	quicksort4(t_var *var)
 
 static void	quicksort5(t_var *var)
 {
+	if (lst_sorted(var->head_a))
+		return ;
 	rot_a(var);
 	push(&var->head_b, &var->head_a);
 	ft_putstr_fd("pb\n", 1);

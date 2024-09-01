@@ -73,14 +73,14 @@ static void	option4(t_mov *mov)
 {
 	if (mov->rra > mov->rrb)
 	{
-		mov->rr = mov->rrb;
-		mov->rra = mov->rra - mov->rr;
+		mov->rrr = mov->rrb;
+		mov->rra = mov->rra - mov->rrr;
 		mov->rrb = 0;
 	}
 	if (mov->rra < mov->rrb)
 	{
-		mov->rr = mov->rra;
-		mov->rrb = mov->rrb - mov->rr;
+		mov->rrr = mov->rra;
+		mov->rrb = mov->rrb - mov->rrr;
 		mov->rra = 0;
 	}
 	mov->ra = 0;
