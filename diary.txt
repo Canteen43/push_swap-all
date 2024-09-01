@@ -13,7 +13,8 @@ Split return:
 Sort-5 has been successfully fixed.
 
 To do:
-	Big lists are sometimes not sorted correctly.
-		Why?
-	I get TLE for the tester
-		Test at 42
+	Some tests still give KO
+		Figure out in eval
+	GNL returns many incomplete lines
+		try another GNL?
+		debug with gdb?

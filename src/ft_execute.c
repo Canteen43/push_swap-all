@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 11:06:54 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/23 14:43:42 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/09/01 19:27:08 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,16 @@ static void	both(t_list **head1, t_list **head2, void (*func)(t_list **))
 {
 	func(head1);
 	func(head2);
+}
+
+int	len(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }
 
 int	execute(t_list **pheada, t_list **pheadb, char *str)

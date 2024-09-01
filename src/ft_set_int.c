@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 12:12:27 by kweihman          #+#    #+#             */
-/*   Updated: 2024/08/23 14:43:42 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/09/01 16:07:58 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int	set_int(char *str, int *p_value)
 	factor = 1;
 	if (*str == '-')
 	{
+		if (*(str + 1) == '\0')
+			return (-1);
 		factor = -1;
 		str++;
 	}

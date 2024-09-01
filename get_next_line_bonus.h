@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 14:00:09 by kweihman          #+#    #+#             */
-/*   Updated: 2024/07/29 12:20:54 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/09/01 18:40:10 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdlib.h> //malloc() and free()
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 43
+#  define BUFFER_SIZE 4096
 # endif
 
 # define GET_NEXT_LINE_BONUS_H
