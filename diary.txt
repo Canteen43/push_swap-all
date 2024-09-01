@@ -17,4 +17,8 @@ To do:
 		Figure out in eval
 	GNL returns many incomplete lines
 		try another GNL?
+			did not work
+		try internet GNL
+			works
+	SHOULD I REDO GET NEXT LINE?
 		debug with gdb?
