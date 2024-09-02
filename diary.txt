@@ -12,13 +12,7 @@ Split return:
 
 Sort-5 has been successfully fixed.
 
+My GNL has random errors. But my checker with internet GNL works fine.
+
 To do:
-	Some tests still give KO
-		Figure out in eval
-	GNL returns many incomplete lines
-		try another GNL?
-			did not work
-		try internet GNL
-			works
-	SHOULD I REDO GET NEXT LINE?
-		debug with gdb?
+	Rewrite GNL?

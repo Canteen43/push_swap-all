@@ -69,8 +69,8 @@ OBJ_FILES 		=	$(SRC_FILES:%.c=$(OBJ_DIR)%.o)
 # Bonus files
 BON_SRC_FILES	=	$(filter-out main.c, $(SRC_FILES)) main_bonus.c
 BON_SRC_FILES	+=	ft_get_ops.c
-BON_SRC_FILES	+=	get_next_line_bonus.c
-BON_SRC_FILES	+=	get_next_line_utils_bonus.c
+BON_SRC_FILES	+=	get_next_line.c
+BON_SRC_FILES	+=	get_next_line_utils.c
 BON_OBJ_FILES 	=	$(BON_SRC_FILES:%.c=$(OBJ_DIR)%.o)
 
 
