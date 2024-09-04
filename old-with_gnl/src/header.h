@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 13:25:59 by kweihman          #+#    #+#             */
-/*   Updated: 2024/09/04 13:06:38 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/28 14:00:03 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,6 @@
 # include <stdlib.h>	//free(), malloc()
 # include <stdbool.h>	//true, false
 # include <stdarg.h>	//va_start(), va_arg(), va_end()
-
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
-# endif
 
 typedef struct s_moves
 {

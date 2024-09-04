@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 13:30:32 by kweihman          #+#    #+#             */
-/*   Updated: 2024/09/04 13:27:06 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/08/31 15:17:02 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ static int	rtn_free_split(int rtn, t_var *var)
 	return (rtn);
 }
 
-static void	free_split(char **ptr)
+void	free_split(char **ptr)
 {
 	int	i;
 

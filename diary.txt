@@ -13,6 +13,3 @@ Split return:
 Sort-5 has been successfully fixed.
 
 My GNL has random errors. But my checker with internet GNL works fine.
-
-To do:
-	Rewrite GNL?

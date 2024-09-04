@@ -1,40 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lmt_check.c                                     :+:      :+:    :+:   */
+/*   ft_get_ops.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/19 11:47:40 by kweihman          #+#    #+#             */
-/*   Updated: 2024/09/02 15:51:02 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/18 13:00:27 by kweihman          #+#    #+#             */
+/*   Updated: 2024/09/01 19:26:54 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header.h"
 
-int	lmt_check(int value, char next)
+int	get_ops(t_list **head_a, t_list **head_b)
 {
-	if (value == -1)
-		return (0);
-	if (value > 0)
+	char	*str;
+
+	while (1)
 	{
-		if (INT_MAX / value < 10)
-			return (-1);
-		if (INT_MAX / value > 10)
+		str = get_next_line(0);
+		if (str == NULL)
 			return (0);
-		if (INT_MAX / value == 10)
-			if (INT_MAX % value < next - '0')
-				return (-1);
-	}
-	if (value < 0)
-	{
-		if (INT_MIN / value < 10)
+		if (execute(head_a, head_b, str) == -1)
+		{
+			free(str);
 			return (-1);
-		if (INT_MIN / value > 10)
-			return (0);
-		if (INT_MIN / value == 10)
-			if (INT_MIN % value * -1 < next - '0')
-				return (-1);
+		}
+		free(str);
 	}
 	return (0);
 }

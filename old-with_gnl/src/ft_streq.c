@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lmt_check.c                                     :+:      :+:    :+:   */
+/*   ft_streq.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/19 11:47:40 by kweihman          #+#    #+#             */
-/*   Updated: 2024/09/02 15:51:02 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/18 14:12:57 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/19 11:28:28 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header.h"
 
-int	lmt_check(int value, char next)
+int	streq(char *str1, char *str2)
 {
-	if (value == -1)
+	if (!str1 && !str2)
+		return (1);
+	if (!str1 || !str2)
 		return (0);
-	if (value > 0)
+	while (*str1 && *str2)
 	{
-		if (INT_MAX / value < 10)
-			return (-1);
-		if (INT_MAX / value > 10)
+		if (*str1 != *str2)
 			return (0);
-		if (INT_MAX / value == 10)
-			if (INT_MAX % value < next - '0')
-				return (-1);
+		str1++;
+		str2++;
 	}
-	if (value < 0)
-	{
-		if (INT_MIN / value < 10)
-			return (-1);
-		if (INT_MIN / value > 10)
-			return (0);
-		if (INT_MIN / value == 10)
-			if (INT_MIN % value * -1 < next - '0')
-				return (-1);
-	}
-	return (0);
+	if (*str1 != *str2)
+		return (0);
+	return (1);
 }

@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lmt_check.c                                     :+:      :+:    :+:   */
+/*   ft_lst_new_to_back.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/19 11:47:40 by kweihman          #+#    #+#             */
-/*   Updated: 2024/09/02 15:51:02 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/17 15:38:19 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/23 14:43:42 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header.h"
 
-int	lmt_check(int value, char next)
+/*This function should take the head of a list and add a new node with value
+ value to its end. If the list is empty it should make the new node the head.*/
+int	lst_new_to_back(t_list **phead, int value)
 {
-	if (value == -1)
+	t_list	*new;
+
+	new = lst_new(value);
+	if (new == NULL)
+		return (-1);
+	if (*phead == NULL)
+	{
+		*phead = new;
 		return (0);
-	if (value > 0)
-	{
-		if (INT_MAX / value < 10)
-			return (-1);
-		if (INT_MAX / value > 10)
-			return (0);
-		if (INT_MAX / value == 10)
-			if (INT_MAX % value < next - '0')
-				return (-1);
 	}
-	if (value < 0)
-	{
-		if (INT_MIN / value < 10)
-			return (-1);
-		if (INT_MIN / value > 10)
-			return (0);
-		if (INT_MIN / value == 10)
-			if (INT_MIN % value * -1 < next - '0')
-				return (-1);
-	}
+	lst_last(*phead)->next = new;
 	return (0);
 }

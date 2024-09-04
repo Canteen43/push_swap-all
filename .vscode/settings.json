@@ -2,6 +2,8 @@
 	"files.associations": {
 		"type_traits": "c",
 		"header.h": "c",
-		"stdbool.h": "c"
+		"stdbool.h": "c",
+		"get_next_line_bonus.h": "c",
+		"libft.h": "c"
 	}
 }

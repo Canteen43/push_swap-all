@@ -1,40 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lmt_check.c                                     :+:      :+:    :+:   */
+/*   ft_char_in_str.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/19 11:47:40 by kweihman          #+#    #+#             */
-/*   Updated: 2024/09/02 15:51:02 by kweihman         ###   ########.fr       */
+/*   Created: 2024/08/07 16:22:08 by kweihman          #+#    #+#             */
+/*   Updated: 2024/08/24 11:31:58 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header.h"
 
-int	lmt_check(int value, char next)
+int	char_in_str(char c, char *s)
 {
-	if (value == -1)
-		return (0);
-	if (value > 0)
+	while (*s)
 	{
-		if (INT_MAX / value < 10)
-			return (-1);
-		if (INT_MAX / value > 10)
-			return (0);
-		if (INT_MAX / value == 10)
-			if (INT_MAX % value < next - '0')
-				return (-1);
-	}
-	if (value < 0)
-	{
-		if (INT_MIN / value < 10)
-			return (-1);
-		if (INT_MIN / value > 10)
-			return (0);
-		if (INT_MIN / value == 10)
-			if (INT_MIN % value * -1 < next - '0')
-				return (-1);
+		if (*s == c)
+			return (1);
+		s++;
 	}
 	return (0);
 }

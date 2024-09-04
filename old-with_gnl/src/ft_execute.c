@@ -6,7 +6,7 @@
 /*   By: kweihman <kweihman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 11:06:54 by kweihman          #+#    #+#             */
-/*   Updated: 2024/09/04 13:30:14 by kweihman         ###   ########.fr       */
+/*   Updated: 2024/09/01 19:27:08 by kweihman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,27 +30,27 @@ int	len(char *str)
 
 int	execute(t_list **pheada, t_list **pheadb, char *str)
 {
-	if (streq(str, "pa"))
+	if (streq(str, "pa\n"))
 		push(pheada, pheadb);
-	else if (streq(str, "pb"))
+	else if (streq(str, "pb\n"))
 		push(pheadb, pheada);
-	else if (streq(str, "sa"))
+	else if (streq(str, "sa\n"))
 		swap(pheada);
-	else if (streq(str, "sb"))
+	else if (streq(str, "sb\n"))
 		swap(pheadb);
-	else if (streq(str, "ss"))
+	else if (streq(str, "ss\n"))
 		both(pheada, pheadb, swap);
-	else if (streq(str, "ra"))
+	else if (streq(str, "ra\n"))
 		rotate(pheada);
-	else if (streq(str, "rb"))
+	else if (streq(str, "rb\n"))
 		rotate(pheadb);
-	else if (streq(str, "rr"))
+	else if (streq(str, "rr\n"))
 		both(pheada, pheadb, rotate);
-	else if (streq(str, "rra"))
+	else if (streq(str, "rra\n"))
 		revrot(pheada);
-	else if (streq(str, "rrb"))
+	else if (streq(str, "rrb\n"))
 		revrot(pheadb);
-	else if (streq(str, "rrr"))
+	else if (streq(str, "rrr\n"))
 		both(pheada, pheadb, revrot);
 	else
 		return (-1);
